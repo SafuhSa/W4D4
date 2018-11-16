@@ -1,0 +1,15 @@
+<h1>this is the index view</h1>
+
+<h3>This is users emails </h3>
+<ul>
+  <% @users.each do |user| %>
+  <li>
+    <%= user[:email] %>
+    <%= user.id %>
+  </li>
+  <% end %>
+</ul>
+<a href="<%=new_user_url%>">Create new user</a>
+<br>
+<a href="<%= new_session_url %>">login</a>
+<!-- session/new -->
